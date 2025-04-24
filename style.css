@@ -70,8 +70,10 @@ p{
 
 
 #sect2{
-    display: none;
+    padding: 0 18px;
     overflow: hidden;
+    max-height: 0;
+    transition: max-height 2s ease-out;
 
     border:solid 4px aqua;
 }

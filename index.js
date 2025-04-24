@@ -5,14 +5,11 @@ var number = 1;
 if (svgCircle && sect2 && clickShapeBox) {
     svgCircle.addEventListener("click", function () {
         console.log("Clicked circle svg");
-        if (sect2.style.display === "block") {
-            sect2.style.display = "none";
-            console.log("Set display to none");
+        if (sect2.style.maxHeight) {
+            sect2.style.maxHeight = "0";
         }
         else {
-            sect2.style.display = "block";
-            sect2.style.height = "600px";
-            console.log("set display to block");
+            sect2.style.maxHeight = sect2.scrollHeight + "px";
         }
         console.log("sect2 height is", sect2.offsetHeight);
     });
