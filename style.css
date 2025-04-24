@@ -1,7 +1,11 @@
+html{
+    height: 100%;
+}
+
 body{
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100%;
     margin: 0;
     background-color: lightblue;
 }
@@ -24,7 +28,7 @@ body{
 }
 
 .expanded{
-    display: block;
+    display: flex;
     height: 400px;
 }
 
@@ -45,10 +49,16 @@ body{
     flex: 0 1;
     align-items: center;
     align-self: stretch;
-    justify-content: center;
 
     background-color: green;
-    font-size: 96px;
+
+    margin: 0;
+    font-size: 90px;
+}
+
+p{
+    margin-top: 30;
+    margin-bottom: 0;
 }
 
 #clickShapeBox{
@@ -69,7 +79,7 @@ body{
 
 #footer{
     display: flex;
-    flex:1;
+    flex:1 0;
     align-items: center;
     justify-content: center;
 

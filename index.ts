@@ -22,6 +22,7 @@ if(svgCircle && sect2 && clickShapeBox)
         else
         {
             sect2.style.display = "block"
+            sect2.style.height = "600px"
             console.log("set display to block")
         }
         console.log("sect2 height is",sect2.offsetHeight)
