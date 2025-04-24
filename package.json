@@ -1,0 +1,27 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "testing na typescript + npm a node.js",
+  "keywords": [
+    "typescript",
+    "nodejs",
+    "javascript",
+    "html",
+    "cs"
+  ],
+  "homepage": "https://github.com/zimon-cocos/Ts-testing#readme",
+  "bugs": {
+    "url": "https://github.com/zimon-cocos/Ts-testing/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zimon-cocos/Ts-testing.git"
+  },
+  "license": "MIT",
+  "author": "simon",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "testcommand"
+  }
+}

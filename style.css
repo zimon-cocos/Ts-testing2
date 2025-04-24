@@ -1,0 +1,37 @@
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-color: lightblue;
+}
+
+#header{
+    display: flex;
+    flex: 1;
+    border: solid 4px red;
+
+    max-height: 150px;
+}
+
+
+#main{
+    display: flex;
+    flex: 1;
+    border: solid 4px green;
+
+}
+
+
+#footer{
+    display: flex;
+    flex:1;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    background-color: blue;
+    border: solid 4px orange;
+
+    max-height: 32px;
+}
