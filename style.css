@@ -24,9 +24,8 @@ body{
 }
 
 .expanded{
-    display: flex;
-    flex: 1;
-    min-height: 400px;
+    display: block;
+    height: 400px;
 }
 
 #sect1{
@@ -61,8 +60,8 @@ body{
 
 
 #sect2{
-    
     display: none;
+    overflow: hidden;
 
     border:solid 4px aqua;
 }
