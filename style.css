@@ -12,11 +12,55 @@ body{
 
 #header{
     display: flex;
-    flex: 1;
-    /*border: solid 4px red;*/
+    flex: 1 1 90px;
+    align-items: center;
+    justify-content: space-between;
 
-    max-height: 150px;
+    background-color: blue;
+    color: #00b300;
+
+    border-radius: 25px;
+
+
+    margin: 32px;
+    max-height: 90px;
 }
+#lTxtNav{
+    flex: 1;
+    margin-left: 22px;
+
+    color: #00b300;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px;
+}
+
+#navBarMid{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+
+    min-width: 180px;
+}
+
+#navBarMidTxtWrapper{
+    display: flex;
+    min-width: 160px;
+    justify-content: space-between;
+
+
+}
+
+#rTxtNav{
+    flex: 1;
+    text-align: right;
+    margin-right: 22px;
+
+    color: #00b300;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px;
+}
+
+
 
 
 #main{
