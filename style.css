@@ -7,13 +7,13 @@ body{
     flex-direction: column;
     min-height: 100%;
     margin: 0;
-    background-color: lightblue;
+    background-color: black;
 }
 
 #header{
     display: flex;
     flex: 1;
-    border: solid 4px red;
+    /*border: solid 4px red;*/
 
     max-height: 150px;
 }
@@ -23,7 +23,7 @@ body{
     display: flex;
     flex: 1;
     flex-direction: column;
-    border: solid 4px green;
+    /*border: solid 4px green;*/
 
 }
 
@@ -40,7 +40,7 @@ body{
     justify-content: space-between;
 
 
-    border:solid 4px purple;
+    /*border:solid 4px purple;*/
 }
 
 #lTxtSect1{
@@ -50,14 +50,15 @@ body{
     align-items: center;
     align-self: stretch;
 
-    background-color: green;
+    background-color: black;
+    color: #00b300;
 
     margin: 0;
-    font-size: 90px;
+    font-size: 196px;
 }
 
 p{
-    margin-top: 30;
+    margin-top: 30px;
     margin-bottom: 0;
 }
 
@@ -77,42 +78,43 @@ p{
     max-height: 0;
     transition: max-height 2s ease-out;
 
-    border:solid 4px aqua;
+   /* border:solid 4px aqua;*/
 }
 
 #sect2col1{
     display: flex;
     flex-direction: column;
-    background-color: lightblue;
-    border:solid 4px green;
+    background-color: black;
+    /*border:solid 4px green;*/
 }
 
 #sect2col2{
     display: flex;
     flex-direction: column;
     align-items: end;
-    background-color: lightblue;
-    border:solid 4px red;
+    background-color: black;
+   /* border:solid 4px red;*/
 }
 
 #sect2col3{
     display: flex;
     flex-direction: column;
-    background-color: lightblue;
-    border:solid 4px blue;
+    background-color: black;
+   /* border:solid 4px blue;*/
 }
 
 .showImg
 {
     width: 800px;
     height: 350px;
-    background-color: aqua;
-    border:solid 4px lime;  
+    background-color: #00b300;
+   /* border:solid 4px lime; */ 
 }
 
 .showTxt
 {
     max-width: 400px;
+    color: #00b300;
 }
 
 #footer{
@@ -121,9 +123,9 @@ p{
     align-items: center;
     justify-content: center;
 
-    color: white;
-    background-color: blue;
-    border: solid 4px orange;
+    color: #00b300;
+    background-color: black;
+   /* border: solid 4px orange;*/
 
     max-height: 32px;
 }
