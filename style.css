@@ -70,6 +70,8 @@ p{
 
 
 #sect2{
+    display: block;
+    flex-direction: column;
     padding: 0 18px;
     overflow: hidden;
     max-height: 0;
@@ -78,6 +80,40 @@ p{
     border:solid 4px aqua;
 }
 
+#sect2col1{
+    display: flex;
+    flex-direction: column;
+    background-color: lightblue;
+    border:solid 4px green;
+}
+
+#sect2col2{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    background-color: lightblue;
+    border:solid 4px red;
+}
+
+#sect2col3{
+    display: flex;
+    flex-direction: column;
+    background-color: lightblue;
+    border:solid 4px blue;
+}
+
+.showImg
+{
+    width: 800px;
+    height: 350px;
+    background-color: aqua;
+    border:solid 4px lime;  
+}
+
+.showTxt
+{
+    max-width: 400px;
+}
 
 #footer{
     display: flex;
