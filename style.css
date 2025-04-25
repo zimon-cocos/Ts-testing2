@@ -45,7 +45,6 @@ body{
 
 #lTxtSect1{
     display: flex;
-    flex-direction: column;
     flex: 0 1;
     align-items: center;
     align-self: stretch;
@@ -128,4 +127,24 @@ p{
    /* border: solid 4px orange;*/
 
     max-height: 32px;
+}
+
+
+.blinking{
+    animation: blink 1s steps(1,end) infinite;
+
+}
+
+@keyframes blink {
+    0%{
+        opacity: 1;
+    }
+
+    50%{
+        opacity: 0
+    }
+    100%{
+        opacity: 1;
+    }
+    
 }
