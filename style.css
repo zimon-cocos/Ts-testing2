@@ -16,7 +16,7 @@ body{
     align-items: center;
     justify-content: space-between;
 
-    background-color: blue;
+    background-color: #1c1c22;
     color: #00b300;
 
     border-radius: 25px;
@@ -167,7 +167,7 @@ p{
     justify-content: center;
 
     color: #00b300;
-    background-color: black;
+    background-color: #1c1c22;
    /* border: solid 4px orange;*/
 
     max-height: 32px;
