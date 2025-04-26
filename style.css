@@ -113,6 +113,11 @@ p{
 }
 
 
+path{
+    transition: all 0.5s;
+}
+
+
 #sect2{
     display: block;
     flex-direction: column;
