@@ -1,2 +1,2 @@
 # Ts-testing2
-Zase skusam
+Stranka ktora zobrazuje moje prace, portfolio stranka??? Readme je WIP!
