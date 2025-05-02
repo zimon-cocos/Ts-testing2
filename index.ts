@@ -8,9 +8,39 @@ let pointUp = false;
 
 const path = document.getElementById("arrowPath") as HTMLElement | null;
 
+const header=document.getElementById("header") as HTMLElement | null;
+var prevScrollPos : number = window.scrollY;
 
 
 
+
+
+if(header)
+    {
+        var headerBottom : number  = header.offsetTop + header.offsetHeight;
+    }
+    
+    if(header)
+    {
+        window.onscroll = function()
+        {
+            var currentScrollPos = window.scrollY;
+    
+            if(prevScrollPos>currentScrollPos || currentScrollPos<headerBottom)
+            {
+                header.style.top = "0"
+            }
+    
+            else
+            {
+                header.style.top = "-90px"
+            }
+        
+            prevScrollPos = currentScrollPos;
+        }  
+    
+    }
+    
 if(svgCircle && sect2 && clickShapeBox)
 {
 
@@ -61,3 +91,5 @@ if(arrow && path && sect2 && clickShapeBox)
     
         })
     }
+
+

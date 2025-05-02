@@ -24,6 +24,17 @@ body{
 
     margin: 32px;
     max-height: 90px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: top 0.5s ease-in-out;
+    z-index: 100;   
+
+
+    margin: 32px;
+    max-height: 90px;
 }
 #lTxtNav{
     flex: 1;
@@ -67,6 +78,7 @@ body{
     display: flex;
     flex: 1;
     flex-direction: column;
+    margin-top: 95px;
     /*border: solid 4px green;*/
 
 }

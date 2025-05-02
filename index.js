@@ -4,6 +4,23 @@ var sect2 = document.getElementById("sect2");
 var arrow = document.getElementById("arrow");
 var pointUp = false;
 var path = document.getElementById("arrowPath");
+var header = document.getElementById("header");
+var prevScrollPos = window.scrollY;
+if (header) {
+    var headerBottom = header.offsetTop + header.offsetHeight;
+}
+if (header) {
+    window.onscroll = function () {
+        var currentScrollPos = window.scrollY;
+        if (prevScrollPos > currentScrollPos || currentScrollPos < headerBottom) {
+            header.style.top = "0";
+        }
+        else {
+            header.style.top = "-90px";
+        }
+        prevScrollPos = currentScrollPos;
+    };
+}
 if (svgCircle && sect2 && clickShapeBox) {
     svgCircle.addEventListener("click", function () {
         console.log("Clicked circle svg");
