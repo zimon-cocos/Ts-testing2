@@ -2,8 +2,12 @@ var svgCircle = document.getElementById("svgCircle");
 var clickShapeBox = document.getElementById("clickShapeBox");
 var sect2 = document.getElementById("sect2");
 var arrow = document.getElementById("arrow");
-var pointUp = false;
+var pointUpSct2 = false;
+var pointUpSct3 = false;
 var path = document.getElementById("arrowPath");
+var sect3 = document.getElementById("sect3");
+var arrow2 = document.getElementById("arrow2");
+var path2 = document.getElementById("arrowPath2");
 var header = document.getElementById("header");
 var prevScrollPos = window.scrollY;
 if (header) {
@@ -21,35 +25,45 @@ if (header) {
         prevScrollPos = currentScrollPos;
     };
 }
-if (svgCircle && sect2 && clickShapeBox) {
-    svgCircle.addEventListener("click", function () {
-        console.log("Clicked circle svg");
-        if (sect2.offsetHeight > 10) {
-            sect2.style.maxHeight = "0";
-            console.log("collapsing");
-        }
-        else {
-            sect2.style.maxHeight = sect2.scrollHeight + "px";
-            console.log("expanding");
-        }
-        console.log("sect2 height is", sect2.offsetHeight);
-    });
-}
 if (arrow && path && sect2 && clickShapeBox) {
     arrow.addEventListener("click", function () {
-        console.log("click");
-        pointUp = !pointUp;
-        if (pointUp) {
+        console.log("click arrow left");
+        if (pointUpSct2) {
             console.log("was pointing up");
             path.setAttribute("d", "M 100 50 L150 100 L200 50");
             sect2.style.maxHeight = "0";
             console.log("collapsing");
         }
-        else {
+        else if (!pointUpSct3) {
             console.log("was pointing down");
             path.setAttribute("d", "M100 50 L150 0 L200 50");
             sect2.style.maxHeight = sect2.scrollHeight + "px";
             console.log("expanding");
         }
+        else {
+            console.log("arrow right is blocking me");
+        }
+        pointUpSct2 = !pointUpSct2;
+    });
+}
+if (arrow2 && path2 && sect3 && clickShapeBox) {
+    arrow2.addEventListener("click", function () {
+        console.log("click arrow right");
+        if (pointUpSct3) {
+            console.log("was pointing up");
+            path2.setAttribute("d", "M 100 50 L150 100 L200 50");
+            sect3.style.maxHeight = "0";
+            console.log("collapsing");
+        }
+        else if (!pointUpSct2) {
+            console.log("was pointing down");
+            path2.setAttribute("d", "M100 50 L150 0 L200 50");
+            sect3.style.maxHeight = sect3.scrollHeight + "px";
+            console.log("expanding");
+        }
+        else {
+            console.log("arrow left is blocking me");
+        }
+        pointUpSct3 = !pointUpSct3;
     });
 }
