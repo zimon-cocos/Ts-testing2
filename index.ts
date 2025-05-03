@@ -52,29 +52,32 @@ if(arrow && path && sect2 && clickShapeBox)
         arrow.addEventListener("click", ()=>
         {
             console.log("click arrow left")
-            
-           
-    
-            if(pointUpSct2)
+            if(!pointUpSct3)
             {
-                console.log("was pointing up")
-                path.setAttribute("d", "M 100 50 L150 100 L200 50")
-                sect2.style.maxHeight = "0"
-                console.log("collapsing")          
-                
+                if(pointUpSct2)
+                {
+                    console.log("was pointing up")
+                    path.setAttribute("d", "M 100 50 L150 100 L200 50")
+                    sect2.style.maxHeight = "0"
+                    console.log("collapsing")          
+                    
+                }
+                else
+                {
+                    console.log("was pointing down")           
+                    path.setAttribute("d","M100 50 L150 0 L200 50")
+                    sect2.style.maxHeight = sect2.scrollHeight + "px";
+                    console.log("expanding")             
+                }
+                pointUpSct2 = !pointUpSct2                  
             }
-            else if(!pointUpSct3)
+            else
             {
-                console.log("was pointing down")           
-                path.setAttribute("d","M100 50 L150 0 L200 50")
-                sect2.style.maxHeight = sect2.scrollHeight + "px";
-                console.log("expanding")             
-            }
-
-            else{
                 console.log("arrow right is blocking me")
-            }
-            pointUpSct2 = !pointUpSct2    
+            }    
+
+
+              
         })
     }
 
@@ -83,25 +86,32 @@ if(arrow && path && sect2 && clickShapeBox)
             arrow2.addEventListener("click", ()=>
             {
                 console.log("click arrow right")
-                
+                if(!pointUpSct2)
+                {
+                    if(pointUpSct3)
+                    {
+                        console.log("was pointing up")
+                        path2.setAttribute("d", "M 100 50 L150 100 L200 50")
+                        sect3.style.maxHeight = "0"
+                        console.log("collapsing")          
+                        
+                    }
+                    else
+                    {
+                        console.log("was pointing down")           
+                        path2.setAttribute("d","M100 50 L150 0 L200 50")
+                        sect3.style.maxHeight = sect3.scrollHeight + "px";
+                        console.log("expanding")             
+                    }
+                    pointUpSct3 = !pointUpSct3                       
+                }
+                else{
+                    console.log("arrow left blocking me")
+                }
                
         
-                if(pointUpSct3)
-                {
-                    console.log("was pointing up")
-                    path2.setAttribute("d", "M 100 50 L150 100 L200 50")
-                    sect3.style.maxHeight = "0"
-                    console.log("collapsing")          
-                    
-                }
-                else if(!pointUpSct2)
-                {
-                    console.log("was pointing down")           
-                    path2.setAttribute("d","M100 50 L150 0 L200 50")
-                    sect3.style.maxHeight = sect3.scrollHeight + "px";
-                    console.log("expanding")             
-                }
-                pointUpSct3 = !pointUpSct3        
+
+                     
             })
         }
     

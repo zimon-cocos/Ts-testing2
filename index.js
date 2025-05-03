@@ -28,42 +28,46 @@ if (header) {
 if (arrow && path && sect2 && clickShapeBox) {
     arrow.addEventListener("click", function () {
         console.log("click arrow left");
-        if (pointUpSct2) {
-            console.log("was pointing up");
-            path.setAttribute("d", "M 100 50 L150 100 L200 50");
-            sect2.style.maxHeight = "0";
-            console.log("collapsing");
-        }
-        else if (!pointUpSct3) {
-            console.log("was pointing down");
-            path.setAttribute("d", "M100 50 L150 0 L200 50");
-            sect2.style.maxHeight = sect2.scrollHeight + "px";
-            console.log("expanding");
+        if (!pointUpSct3) {
+            if (pointUpSct2) {
+                console.log("was pointing up");
+                path.setAttribute("d", "M 100 50 L150 100 L200 50");
+                sect2.style.maxHeight = "0";
+                console.log("collapsing");
+            }
+            else {
+                console.log("was pointing down");
+                path.setAttribute("d", "M100 50 L150 0 L200 50");
+                sect2.style.maxHeight = sect2.scrollHeight + "px";
+                console.log("expanding");
+            }
+            pointUpSct2 = !pointUpSct2;
         }
         else {
             console.log("arrow right is blocking me");
         }
-        pointUpSct2 = !pointUpSct2;
     });
 }
 if (arrow2 && path2 && sect3 && clickShapeBox) {
     arrow2.addEventListener("click", function () {
         console.log("click arrow right");
-        if (pointUpSct3) {
-            console.log("was pointing up");
-            path2.setAttribute("d", "M 100 50 L150 100 L200 50");
-            sect3.style.maxHeight = "0";
-            console.log("collapsing");
-        }
-        else if (!pointUpSct2) {
-            console.log("was pointing down");
-            path2.setAttribute("d", "M100 50 L150 0 L200 50");
-            sect3.style.maxHeight = sect3.scrollHeight + "px";
-            console.log("expanding");
+        if (!pointUpSct2) {
+            if (pointUpSct3) {
+                console.log("was pointing up");
+                path2.setAttribute("d", "M 100 50 L150 100 L200 50");
+                sect3.style.maxHeight = "0";
+                console.log("collapsing");
+            }
+            else {
+                console.log("was pointing down");
+                path2.setAttribute("d", "M100 50 L150 0 L200 50");
+                sect3.style.maxHeight = sect3.scrollHeight + "px";
+                console.log("expanding");
+            }
+            pointUpSct3 = !pointUpSct3;
         }
         else {
-            console.log("arrow left is blocking me");
+            console.log("arrow left blocking me");
         }
-        pointUpSct3 = !pointUpSct3;
     });
 }
