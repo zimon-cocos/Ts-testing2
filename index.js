@@ -20,7 +20,7 @@ if (header) {
             header.style.top = "0";
         }
         else {
-            header.style.top = "-120px";
+            header.style.top = "-150px";
         }
         prevScrollPos = currentScrollPos;
     };
@@ -37,7 +37,7 @@ if (arrow && path && sect2 && clickShapeBox) {
             }
             else {
                 console.log("was pointing down");
-                path.setAttribute("d", "M100 50 L150 0 L200 50");
+                path.setAttribute("d", "M100 50 L150 3 L200 50");
                 sect2.style.maxHeight = sect2.scrollHeight + "px";
                 console.log("expanding");
             }
@@ -60,7 +60,7 @@ if (arrow2 && path2 && sect3 && clickShapeBox) {
             }
             else {
                 console.log("was pointing down");
-                path2.setAttribute("d", "M100 50 L150 0 L200 50");
+                path2.setAttribute("d", "M100 50 L150 3 L200 50");
                 sect3.style.maxHeight = sect3.scrollHeight + "px";
                 console.log("expanding");
             }

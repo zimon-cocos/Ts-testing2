@@ -42,7 +42,7 @@ body{
 
     color: #00b300;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 32px;
+    font-size: 2rem;
 }
 
 #navBarMid{
@@ -57,8 +57,13 @@ body{
     display: flex;
     min-width: 160px;
     justify-content: space-between;
+    gap: 0.5rem;
 
+}
 
+.navTextMid{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
 }
 
 #rTxtNav{
@@ -68,7 +73,7 @@ body{
 
     color: #00b300;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 32px;
+    font-size: 2rem;
 }
 
 
@@ -83,10 +88,7 @@ body{
 
 }
 
-.expanded{
-    display: flex;
-    height: 400px;
-}
+
 
 #sect1{
     display: flex;
@@ -166,27 +168,24 @@ path{
 
    /* border:solid 4px aqua;*/
 }
-#sect2col1{
+.sect2colL{
     display: flex;
     flex-direction: column;
     background-color: black;
+    margin: 0.5rem;
     /*border:solid 4px green;*/
 }
 
-#sect2col2{
+.sect2colR{
     display: flex;
     flex-direction: column;
     align-items: end;
     background-color: black;
+    margin: 0.5rem;
    /* border:solid 4px red;*/
 }
 
-#sect2col3{
-    display: flex;
-    flex-direction: column;
-    background-color: black;
-   /* border:solid 4px blue;*/
-}
+
 
 #sect3{
     display: block;
@@ -199,37 +198,21 @@ path{
    /* border:solid 4px aqua;*/
 }
 
-#sect3col1{
+.sect3colL{
     display: flex;
     flex-direction: column;
     background-color: black;
+    margin: 0.5rem;
     /*border:solid 4px green;*/
 }
 
-#sect3col2{
+.sect3colR{
     display: flex;
     flex-direction: column;
     align-items: end;
     background-color: black;
+    margin: 0.5rem;
    /* border:solid 4px red;*/
-}
-
-#sect3col3{
-    display: flex;
-    flex-direction: column;
-    background-color: black;
-   /* border:solid 4px blue;*/
-}
-
-
-
-
-.showImgSct1
-{
-    width: 800px;
-    height: 350px;
-    background-color: #00b300;
-   /* border:solid 4px lime; */ 
 }
 
 
@@ -237,7 +220,18 @@ path{
 {
     width: 800px;
     height: 350px;
+    background-color: #00b300;
+    border-radius: 1rem;
+   /* border:solid 4px lime; */ 
+}
+
+
+.showImgSct3
+{
+    width: 800px;
+    height: 350px;
     background-color: blue;
+    border-radius: 1rem;
    /* border:solid 4px lime; */ 
 }
 
@@ -245,6 +239,7 @@ path{
 {
     max-width: 400px;
     color: #00b300;
+    font-size: 1.25rem;
 }
 
 #footer{
@@ -266,6 +261,13 @@ path{
 
 }
 
+
+/*
+rozbija transition animaciu ked sa meni stav sipky
+path:hover{
+    stroke-width: 6px;
+}*/
+
 @keyframes blink {
     0%{
         opacity: 1;
@@ -279,3 +281,47 @@ path{
     }
     
 }
+
+/* EXPERIMENTALNE*/
+
+/* ked je vw velka*/
+/*@media screen and (min-width: 601px)
+{
+    #lTxtSect1
+    {
+        font-size: 5rem;
+    }
+
+    #dscTxtSect1
+    {
+        font-size: 2.5rem;
+    }
+
+}*/
+
+/* ked je vw mala*/
+
+@media screen and (max-width: 800px)
+{
+    #header{
+        flex-direction: column;
+        max-height: 6rem;
+    }
+
+    #lTxtSect1
+    {
+        font-size: 3rem;
+    }
+
+    #dscTxtSect1
+    {
+        font-size: 1.5rem;
+    }
+
+    .showImgSct2,.showImgSct3{
+        width:400px;
+        height: 175px;
+    } 
+
+}
+
