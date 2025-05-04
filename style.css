@@ -99,6 +99,15 @@ body{
     /*border:solid 4px purple;*/
 }
 
+#mainTxtBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: stretch;
+
+    margin-left: 32px;
+}
+
 #lTxtSect1{
     display: flex;
     flex: 0 1;
@@ -110,6 +119,24 @@ body{
 
     margin: 0;
     font-size: 96px;
+}
+
+#dscTxtSect1{
+    display: flex;
+    flex: 0 1;
+    align-items: center;
+    align-self: stretch;
+
+    background-color: black;
+    color: #00b300;
+
+    margin: 0;
+    font-size: 32px;
+}
+
+#dscTxt
+{
+    margin: 0;
 }
 
 p{

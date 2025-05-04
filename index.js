@@ -20,7 +20,7 @@ if (header) {
             header.style.top = "0";
         }
         else {
-            header.style.top = "-90px";
+            header.style.top = "-120px";
         }
         prevScrollPos = currentScrollPos;
     };

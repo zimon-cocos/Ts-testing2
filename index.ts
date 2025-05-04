@@ -38,7 +38,7 @@ if(header)
     
             else
             {
-                header.style.top = "-90px"
+                header.style.top = "-120px"
             }
         
             prevScrollPos = currentScrollPos;
@@ -74,6 +74,7 @@ if(arrow && path && sect2 && clickShapeBox)
             else
             {
                 console.log("arrow right is blocking me")
+
             }    
 
 
