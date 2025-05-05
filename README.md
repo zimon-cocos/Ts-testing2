@@ -1,2 +1,2 @@
 # Ts-testing2
-Stranka ktora zobrazuje moje prace, portfolio stranka??? Readme je WIP!
+Stranka ktora zobrazi par viet textu, 3 obrazky a ma aj animacie.

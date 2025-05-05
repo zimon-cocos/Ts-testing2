@@ -57,7 +57,7 @@ if(arrow && path && sect2 && clickShapeBox)
                 if(pointUpSct2)
                 {
                     console.log("was pointing up")
-                    path.setAttribute("d", "M 100 50 L150 100 L200 50")
+                    path.setAttribute("d", "M 1 50 L50 99 L99 50 ")
                     sect2.style.maxHeight = "0"
                     console.log("collapsing")          
                     
@@ -65,7 +65,7 @@ if(arrow && path && sect2 && clickShapeBox)
                 else
                 {
                     console.log("was pointing down")           
-                    path.setAttribute("d","M100 50 L150 3 L200 50")
+                    path.setAttribute("d","M1 50 L50 3 L99 50")
                     sect2.style.maxHeight = sect2.scrollHeight + "px";
                     console.log("expanding")             
                 }
@@ -75,11 +75,26 @@ if(arrow && path && sect2 && clickShapeBox)
             {
                 console.log("arrow right is blocking me")
 
-            }    
+            }   
 
 
               
         })
+            //Animate downward movement of arrow on mouseover
+            arrow.addEventListener("mouseover",()=>{
+                if(!pointUpSct2 && !pointUpSct3)
+                {
+                    path.setAttribute("d", "M 1 60 L50 109 L99 60")
+                }
+            })
+            //Animate movement of arrow returning to original position before mouseover
+            arrow.addEventListener("mouseout",()=>{
+                if(!pointUpSct2)
+                {
+                    path.setAttribute("d", "M 1 50 L50 99 L99 50")
+                }
+            })
+        
     }
 
     if(arrow2 && path2 && sect3 && clickShapeBox) 
@@ -92,7 +107,7 @@ if(arrow && path && sect2 && clickShapeBox)
                     if(pointUpSct3)
                     {
                         console.log("was pointing up")
-                        path2.setAttribute("d", "M 100 50 L150 100 L200 50")
+                        path2.setAttribute("d", "M 1 50 L50 99 L99 50")
                         sect3.style.maxHeight = "0"
                         console.log("collapsing")          
                         
@@ -100,7 +115,7 @@ if(arrow && path && sect2 && clickShapeBox)
                     else
                     {
                         console.log("was pointing down")           
-                        path2.setAttribute("d","M100 50 L150 3 L200 50")
+                        path2.setAttribute("d","M1 50 L50 3 L99 50")
                         sect3.style.maxHeight = sect3.scrollHeight + "px";
                         console.log("expanding")             
                     }
@@ -114,6 +129,23 @@ if(arrow && path && sect2 && clickShapeBox)
 
                      
             })
+
+            //Animate downward movement of arrow on mouseover
+            arrow2.addEventListener("mouseover",()=>{
+                if(!pointUpSct3 && !pointUpSct2)
+                {
+                    path2.setAttribute("d", "M 1 60 L50 109 L99 60")
+                }
+            })
+            //Animate movement of arrow returning to original position before mouseover
+            arrow2.addEventListener("mouseout",()=>{
+                if(!pointUpSct3)
+                {
+                    path2.setAttribute("d", "M 1 50 L50 99 L99 50")
+                }
+            })
+
+
         }
     
     
