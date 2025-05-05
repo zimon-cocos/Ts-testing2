@@ -148,10 +148,15 @@ p{
 
 #clickShapeBox{
     display: flex;
+    flex: 0 1;
     align-items: center;
     justify-content: center;
 }
 
+
+#arrow,#arrow2{
+    
+}
 
 path{
     transition: all 0.5s;
@@ -305,7 +310,24 @@ path:hover{
 {
     #header{
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         max-height: 6rem;
+
+    }
+
+    #lTxtNav{
+        font-size: 1.5rem;
+        margin-left: 0;
+    }
+
+    .navTextMid{
+        font-size: 1rem;
+    }
+
+    #rTxtNav{
+        font-size: 1.5rem;
+        margin-right: 0;
     }
 
     #lTxtSect1
